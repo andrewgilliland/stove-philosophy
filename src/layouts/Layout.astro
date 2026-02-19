@@ -14,8 +14,8 @@ const navItems = [
 const navLinkClass = (href: string) =>
   `rounded-md px-3 py-2 text-sm transition ${
     pathname === href
-      ? "bg-slate-700 text-white"
-      : "text-slate-300 hover:bg-slate-800 hover:text-white"
+      ? "bg-indigo-500/20 text-indigo-200 ring-1 ring-indigo-400/40"
+      : "text-slate-300 hover:bg-cyan-500/10 hover:text-cyan-200"
   }`;
 ---
 
@@ -29,12 +29,20 @@ const navLinkClass = (href: string) =>
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-slate-950 text-slate-100">
-    <header class="border-b border-slate-800 bg-slate-950/90 backdrop-blur">
+  <body class="min-h-screen overflow-x-hidden bg-slate-950 text-slate-100 antialiased">
+    <div
+      aria-hidden="true"
+      class="ambient-glow pointer-events-none fixed inset-x-0 top-0 -z-10 h-72"
+    ></div>
+    <header
+      class="border-b border-slate-800 bg-slate-950/90 shadow-[0_0_40px_rgba(56,189,248,0.08)] backdrop-blur"
+    >
       <div
         class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-6 py-4"
       >
-        <a href="/" class="text-sm font-semibold tracking-wide text-white"
+        <a
+          href="/"
+          class="brand-shimmer bg-gradient-to-r from-amber-300 via-orange-300 to-rose-300 bg-clip-text text-sm font-semibold tracking-wide text-transparent"
           >Stove Philosophy</a
         >
         <nav class="flex flex-wrap gap-1">
@@ -47,6 +55,10 @@ const navLinkClass = (href: string) =>
           }
         </nav>
       </div>
+      <div
+        class="gradient-sweep h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent"
+      >
+      </div>
     </header>
     <slot />
   </body>
@@ -58,5 +70,65 @@ const navLinkClass = (href: string) =>
     margin: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .ambient-glow {
+    background:
+      radial-gradient(600px 220px at 15% -10%, rgba(99, 102, 241, 0.22), transparent 70%),
+      radial-gradient(500px 220px at 85% 0%, rgba(34, 211, 238, 0.18), transparent 72%),
+      radial-gradient(460px 220px at 50% -20%, rgba(245, 158, 11, 0.14), transparent 75%);
+    filter: blur(34px);
+    animation: ambientPulse 12s ease-in-out infinite;
+  }
+
+  .brand-shimmer {
+    background-size: 200% 100%;
+    animation: brandShimmer 10s linear infinite;
+  }
+
+  .gradient-sweep {
+    background-size: 180% 100%;
+    animation: lineSweep 9s ease-in-out infinite;
+  }
+
+  @keyframes ambientPulse {
+    0%,
+    100% {
+      opacity: 0.38;
+      transform: translateY(0px) scale(1);
+    }
+    50% {
+      opacity: 0.52;
+      transform: translateY(-4px) scale(1.02);
+    }
+  }
+
+  @keyframes brandShimmer {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
+  }
+
+  @keyframes lineSweep {
+    0%,
+    100% {
+      background-position: 0% 50%;
+      opacity: 0.75;
+    }
+    50% {
+      background-position: 100% 50%;
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ambient-glow,
+    .brand-shimmer,
+    .gradient-sweep {
+      animation: none;
+    }
   }
 </style>
