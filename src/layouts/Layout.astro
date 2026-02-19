@@ -6,6 +6,7 @@ const pathname = Astro.url.pathname;
 
 const navItems = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   { href: "/principles", label: "Core Principles" },
   { href: "/burners", label: "Four Burners" },
   { href: "/leftovers", label: "Leftovers" },
@@ -29,11 +30,14 @@ const navLinkClass = (href: string) =>
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="min-h-screen overflow-x-hidden bg-slate-950 text-slate-100 antialiased">
+  <body
+    class="min-h-screen overflow-x-hidden bg-slate-950 text-slate-100 antialiased"
+  >
     <div
       aria-hidden="true"
       class="ambient-glow pointer-events-none fixed inset-x-0 top-0 -z-10 h-72"
-    ></div>
+    >
+    </div>
     <header
       class="border-b border-slate-800 bg-slate-950/90 shadow-[0_0_40px_rgba(56,189,248,0.08)] backdrop-blur"
     >
@@ -74,9 +78,21 @@ const navLinkClass = (href: string) =>
 
   .ambient-glow {
     background:
-      radial-gradient(600px 220px at 15% -10%, rgba(99, 102, 241, 0.22), transparent 70%),
-      radial-gradient(500px 220px at 85% 0%, rgba(34, 211, 238, 0.18), transparent 72%),
-      radial-gradient(460px 220px at 50% -20%, rgba(245, 158, 11, 0.14), transparent 75%);
+      radial-gradient(
+        600px 220px at 15% -10%,
+        rgba(99, 102, 241, 0.22),
+        transparent 70%
+      ),
+      radial-gradient(
+        500px 220px at 85% 0%,
+        rgba(34, 211, 238, 0.18),
+        transparent 72%
+      ),
+      radial-gradient(
+        460px 220px at 50% -20%,
+        rgba(245, 158, 11, 0.14),
+        transparent 75%
+      );
     filter: blur(34px);
     animation: ambientPulse 12s ease-in-out infinite;
   }
