@@ -1,58 +1,135 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<main class="min-h-screen bg-slate-950 text-slate-100">
-		<section class="mx-auto max-w-5xl px-6 py-20 sm:py-28">
-			<p class="mb-4 inline-flex rounded-full border border-slate-700 bg-slate-900/70 px-3 py-1 text-xs font-medium tracking-wide text-slate-300">
-				Stove Philosophy
-			</p>
-			<h1 class="max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-6xl">
-				Thoughtful cooking, shared simply.
-			</h1>
-			<p class="mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg">
-				A calm place for recipes, techniques, and reflections from the kitchen. Built with Astro and styled with Tailwind CSS.
-			</p>
-			<div class="mt-10 flex flex-wrap gap-3">
-				<a href="#latest" class="rounded-md bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-200">
-					Read latest posts
-				</a>
-				<a href="#about" class="rounded-md border border-slate-600 px-5 py-2.5 text-sm font-semibold text-slate-100 transition hover:bg-slate-800">
-					About this project
-				</a>
-			</div>
-		</section>
+  <main class="min-h-screen bg-slate-950 text-slate-100">
+    <section class="mx-auto max-w-5xl px-6 py-20 sm:py-28">
+      <p
+        class="mb-4 inline-flex rounded-full border border-slate-700 bg-slate-900/70 px-3 py-1 text-xs font-medium tracking-wide text-slate-300"
+      >
+        Stove Philosophy
+      </p>
+      <h1
+        class="max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-6xl"
+      >
+        the ancient art of enduring heat, waiting patiently, and accepting that
+        some things just need to simmer.
+      </h1>
+      <p class="mt-6 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg">
+        Core Principles:
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a
+          href="#latest"
+          class="rounded-md bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-200"
+        >
+          Read the principles
+        </a>
+        <a
+          href="#about"
+          class="rounded-md border border-slate-600 px-5 py-2.5 text-sm font-semibold text-slate-100 transition hover:bg-slate-800"
+        >
+          Meditation on the flame
+        </a>
+      </div>
+    </section>
 
-		<section id="latest" class="mx-auto grid max-w-5xl gap-5 px-6 pb-16 sm:grid-cols-3">
-			<article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
-				<p class="text-xs uppercase tracking-wider text-slate-400">Technique</p>
-				<h2 class="mt-2 text-lg font-semibold text-white">Heat, then patience</h2>
-				<p class="mt-3 text-sm leading-6 text-slate-300">How to build flavor with high heat and restraint instead of constant stirring.</p>
-			</article>
-			<article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
-				<p class="text-xs uppercase tracking-wider text-slate-400">Recipe</p>
-				<h2 class="mt-2 text-lg font-semibold text-white">Weeknight tomato braise</h2>
-				<p class="mt-3 text-sm leading-6 text-slate-300">A one-pot dinner with pantry ingredients and deep flavor in under 40 minutes.</p>
-			</article>
-			<article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
-				<p class="text-xs uppercase tracking-wider text-slate-400">Notes</p>
-				<h2 class="mt-2 text-lg font-semibold text-white">On simple tools</h2>
-				<p class="mt-3 text-sm leading-6 text-slate-300">Why a good knife, a heavy pan, and salt can cover most of your cooking life.</p>
-			</article>
-		</section>
+    <section
+      id="latest"
+      class="mx-auto grid max-w-5xl gap-5 px-6 pb-16 sm:grid-cols-2"
+    >
+      <article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+        <p class="text-xs uppercase tracking-wider text-slate-400">
+          Core Principle I
+        </p>
+        <h2 class="mt-2 text-lg font-semibold text-white">Embrace the Flame</h2>
+        <p class="mt-3 text-sm leading-6 text-slate-300">
+          You cannot control the burner of fate, only how you respond to it.
+          When life turns up the heat, do not flee the kitchen. Stand firm,
+          adjust your temperature settings, and remember: even the greatest
+          meals require discomfort.
+        </p>
+      </article>
+      <article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+        <p class="text-xs uppercase tracking-wider text-slate-400">
+          Core Principle II
+        </p>
+        <h2 class="mt-2 text-lg font-semibold text-white">
+          The Virtue of Preheating
+        </h2>
+        <p class="mt-3 text-sm leading-6 text-slate-300">
+          Preparation is everything. The hasty chef who throws ingredients into
+          a cold pan achieves only disappointment. So too must you preheat your
+          mind before facing the day's challenges. Rushing leads to sticking.
+        </p>
+      </article>
+      <article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+        <p class="text-xs uppercase tracking-wider text-slate-400">
+          Core Principle III
+        </p>
+        <h2 class="mt-2 text-lg font-semibold text-white">
+          All Things in Their Season(ing)
+        </h2>
+        <p class="mt-3 text-sm leading-6 text-slate-300">
+          Add salt at the right moment, not before, not after. Timing matters.
+          Patience is not weakness—it is knowing when something needs five more
+          minutes, even when you're hungry now.
+        </p>
+      </article>
+      <article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+        <p class="text-xs uppercase tracking-wider text-slate-400">
+          Core Principle IV
+        </p>
+        <h2 class="mt-2 text-lg font-semibold text-white">
+          Accept What Cannot Be Unburnt
+        </h2>
+        <p class="mt-3 text-sm leading-6 text-slate-300">
+          The toast is blackened. The soup has boiled over. Lamenting changes
+          nothing. Scrape what can be salvaged, learn, and move forward.
+          Dwelling on culinary disaster only ensures the next course also burns.
+        </p>
+      </article>
+      <article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+        <p class="text-xs uppercase tracking-wider text-slate-400">
+          Core Principle V
+        </p>
+        <h2 class="mt-2 text-lg font-semibold text-white">
+          The Four Burners of Life
+        </h2>
+        <p class="mt-3 text-sm leading-6 text-slate-300">
+          Family, work, health, friends. The ancient Stoves teach that you
+          cannot keep all four on high simultaneously. Accept this. Something
+          must be set to simmer, or you'll scorch everything.
+        </p>
+      </article>
+      <article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+        <p class="text-xs uppercase tracking-wider text-slate-400">
+          Core Principle VI
+        </p>
+        <h2 class="mt-2 text-lg font-semibold text-white">
+          Memento Mori...tality of Leftovers
+        </h2>
+        <p class="mt-3 text-sm leading-6 text-slate-300">
+          Remember: all food expires. Even that which seems preserved will
+          eventually spoil. This is not cause for despair, but urgency—eat the
+          good cheese today, for tomorrow it may be fuzzy.
+        </p>
+      </article>
+    </section>
 
-		<section id="about" class="border-y border-slate-800 bg-slate-900/40">
-			<div class="mx-auto max-w-5xl px-6 py-14">
-				<h2 class="text-2xl font-semibold text-white">Built for clarity</h2>
-				<p class="mt-4 max-w-3xl text-sm leading-7 text-slate-300 sm:text-base">
-					This page uses a minimal Astro layout with Tailwind utility classes for typography, spacing, color, and responsive behavior. Use it as a foundation for your content model, blog routes, and CMS integration.
-				</p>
-			</div>
-		</section>
+    <section id="about" class="border-y border-slate-800 bg-slate-900/40">
+      <div class="mx-auto max-w-5xl px-6 py-14">
+        <h2 class="text-2xl font-semibold text-white">Stove Philosophy</h2>
+        <p class="mt-4 max-w-3xl text-sm leading-7 text-slate-300 sm:text-base">
+          Endure the heat. Respect preparation. Honor timing. Accept mistakes.
+          Balance the burners. Remember the leftovers. This is the practice.
+        </p>
+      </div>
+    </section>
 
-		<footer class="mx-auto max-w-5xl px-6 py-10 text-xs text-slate-400">
-			© {new Date().getFullYear()} Stove Philosophy. Built with Astro + Tailwind.
-		</footer>
-	</main>
+    <footer class="mx-auto max-w-5xl px-6 py-10 text-xs text-slate-400">
+      © {new Date().getFullYear()} Stove Philosophy.
+    </footer>
+  </main>
 </Layout>
