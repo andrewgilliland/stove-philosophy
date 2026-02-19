@@ -1,5 +1,22 @@
 ---
 import "../styles/global.css";
+
+const { title = "Stove Philosophy" } = Astro.props;
+const pathname = Astro.url.pathname;
+
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/principles", label: "Core Principles" },
+  { href: "/burners", label: "Four Burners" },
+  { href: "/leftovers", label: "Leftovers" },
+];
+
+const navLinkClass = (href: string) =>
+  `rounded-md px-3 py-2 text-sm transition ${
+    pathname === href
+      ? "bg-slate-700 text-white"
+      : "text-slate-300 hover:bg-slate-800 hover:text-white"
+  }`;
 ---
 
 <!doctype html>
@@ -10,9 +27,27 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>Stove Philosophy</title>
+    <title>{title}</title>
   </head>
-  <body>
+  <body class="bg-slate-950 text-slate-100">
+    <header class="border-b border-slate-800 bg-slate-950/90 backdrop-blur">
+      <div
+        class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-6 py-4"
+      >
+        <a href="/" class="text-sm font-semibold tracking-wide text-white"
+          >Stove Philosophy</a
+        >
+        <nav class="flex flex-wrap gap-1">
+          {
+            navItems.map((item) => (
+              <a href={item.href} class={navLinkClass(item.href)}>
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+    </header>
     <slot />
   </body>
 </html>
