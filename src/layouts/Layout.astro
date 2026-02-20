@@ -73,15 +73,15 @@ const navLinkClass = (href: string) =>
         >
         <nav class="flex flex-wrap gap-1">
           {
-            navItems.map((item) => (
-              <a href={item.href} class={navLinkClass(item.href)}>
-                <item.Icon
+            navItems.map(({ href, label, Icon }) => (
+              <a href={href} class={navLinkClass(href)}>
+                <Icon
                   size={16}
                   stroke-width={2}
                   class="h-4 w-4"
                   aria-hidden="true"
                 />
-                {item.label}
+                {label}
               </a>
             ))
           }
