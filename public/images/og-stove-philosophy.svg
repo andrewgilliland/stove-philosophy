@@ -1,0 +1,33 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Stove Philosophy Social Preview</title>
+  <desc id="desc">Dark themed social preview card with Stove Philosophy title and subtle glows.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020617"/>
+      <stop offset="0.55" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(240 110) rotate(90) scale(200 280)">
+      <stop stop-color="#22D3EE" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1020 70) rotate(90) scale(220 300)">
+      <stop stop-color="#F59E0B" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="100" y1="0" x2="700" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDE68A"/>
+      <stop offset="0.5" stop-color="#FDBA74"/>
+      <stop offset="1" stop-color="#F9A8D4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <ellipse cx="240" cy="110" rx="280" ry="200" fill="url(#glowA)"/>
+  <ellipse cx="1020" cy="70" rx="300" ry="220" fill="url(#glowB)"/>
+
+  <text x="600" y="255" fill="url(#titleGrad)" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="82" font-weight="800" letter-spacing="0.5">Stove Philosophy</text>
+  <text x="600" y="326" fill="#CBD5E1" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="31" font-weight="500">Endure heat. Stir occasionally. Pretend this is profound.</text>
+
+  <text x="600" y="540" fill="#94A3B8" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="24">Core Principles • Four Burners • Leftovers • About</text>
+</svg>
