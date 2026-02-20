@@ -1,4 +1,5 @@
 ---
+import { Clock3, Flame, History, Soup, Sparkles } from "@lucide/astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -11,7 +12,7 @@ import Layout from "../layouts/Layout.astro";
         About Stove Philosophy
       </p>
       <h1
-        class="mt-5 max-w-3xl bg-gradient-to-r from-fuchsia-100 via-amber-100 to-cyan-100 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-6xl"
+        class="mt-5 max-w-3xl bg-linear-to-r from-fuchsia-100 via-amber-100 to-cyan-100 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-6xl"
       >
         A completely serious history (that definitely happened)
       </h1>
@@ -27,7 +28,8 @@ import Layout from "../layouts/Layout.astro";
       <article
         class="rounded-xl border border-amber-400/20 bg-amber-500/10 p-5"
       >
-        <h2 class="text-lg font-semibold text-white">
+        <h2 class="flex items-center gap-2 text-lg font-semibold text-white">
+          <Flame size={18} class="text-amber-200" aria-hidden="true" />
           Chapter I: The Great Simmering
         </h2>
         <p class="mt-3 text-sm leading-6 text-slate-300">
@@ -41,7 +43,8 @@ import Layout from "../layouts/Layout.astro";
       <article
         class="rounded-xl border border-indigo-400/20 bg-indigo-500/10 p-5"
       >
-        <h2 class="text-lg font-semibold text-white">
+        <h2 class="flex items-center gap-2 text-lg font-semibold text-white">
+          <Sparkles size={18} class="text-indigo-200" aria-hidden="true" />
           Chapter II: The Preheating Schism
         </h2>
         <p class="mt-3 text-sm leading-6 text-slate-300">
@@ -54,7 +57,8 @@ import Layout from "../layouts/Layout.astro";
       <article
         class="rounded-xl border border-emerald-400/20 bg-emerald-500/10 p-5 sm:col-span-2"
       >
-        <h2 class="text-lg font-semibold text-white">
+        <h2 class="flex items-center gap-2 text-lg font-semibold text-white">
+          <History size={18} class="text-emerald-200" aria-hidden="true" />
           Chapter III: The Four Burners Treaty
         </h2>
         <p class="mt-3 text-sm leading-6 text-slate-300">
@@ -69,7 +73,8 @@ import Layout from "../layouts/Layout.astro";
       <article
         class="rounded-xl border border-rose-400/20 bg-rose-500/10 p-5 sm:col-span-2"
       >
-        <h2 class="text-lg font-semibold text-white">
+        <h2 class="flex items-center gap-2 text-lg font-semibold text-white">
+          <Soup size={18} class="text-rose-200" aria-hidden="true" />
           Chapter IV: The Leftover Prophecy
         </h2>
         <p class="mt-3 text-sm leading-6 text-slate-300">
@@ -84,12 +89,17 @@ import Layout from "../layouts/Layout.astro";
     <section
       class="mt-10 rounded-xl border border-violet-400/20 bg-violet-500/10 p-6"
     >
-      <h2 class="text-xl font-semibold text-white">Founding Timeline</h2>
+      <h2 class="flex items-center gap-2 text-xl font-semibold text-white">
+        <History size={20} class="text-violet-200" aria-hidden="true" />
+        Founding Timeline
+      </h2>
       <ol class="relative mt-6 space-y-8 pl-8">
         <li class="relative">
           <span
-            class="absolute -left-[2.15rem] top-1.5 h-4 w-4 rounded-full border-2 border-violet-200 bg-violet-500 shadow-[0_0_0_4px_rgba(139,92,246,0.25)]"
-          ></span>
+            class="absolute -left-[2.3rem] top-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full border border-violet-200/80 bg-violet-500 text-violet-50 shadow-[0_0_0_4px_rgba(139,92,246,0.25)]"
+          >
+            <Clock3 size={12} aria-hidden="true" />
+          </span>
           <p
             class="inline-flex rounded-full border border-violet-300/30 bg-violet-400/10 px-2 py-0.5 text-xs font-semibold tracking-wide text-violet-200"
           >
@@ -102,8 +112,10 @@ import Layout from "../layouts/Layout.astro";
         </li>
         <li class="relative">
           <span
-            class="absolute -left-[2.15rem] top-1.5 h-4 w-4 rounded-full border-2 border-violet-200 bg-violet-500 shadow-[0_0_0_4px_rgba(139,92,246,0.25)]"
-          ></span>
+            class="absolute -left-[2.3rem] top-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full border border-violet-200/80 bg-violet-500 text-violet-50 shadow-[0_0_0_4px_rgba(139,92,246,0.25)]"
+          >
+            <Clock3 size={12} aria-hidden="true" />
+          </span>
           <p
             class="inline-flex rounded-full border border-violet-300/30 bg-violet-400/10 px-2 py-0.5 text-xs font-semibold tracking-wide text-violet-200"
           >
@@ -116,8 +128,10 @@ import Layout from "../layouts/Layout.astro";
         </li>
         <li class="relative">
           <span
-            class="absolute -left-[2.15rem] top-1.5 h-4 w-4 rounded-full border-2 border-violet-200 bg-violet-500 shadow-[0_0_0_4px_rgba(139,92,246,0.25)]"
-          ></span>
+            class="absolute -left-[2.3rem] top-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full border border-violet-200/80 bg-violet-500 text-violet-50 shadow-[0_0_0_4px_rgba(139,92,246,0.25)]"
+          >
+            <Clock3 size={12} aria-hidden="true" />
+          </span>
           <p
             class="inline-flex rounded-full border border-violet-300/30 bg-violet-400/10 px-2 py-0.5 text-xs font-semibold tracking-wide text-violet-200"
           >
@@ -134,7 +148,10 @@ import Layout from "../layouts/Layout.astro";
     <section
       class="mt-10 rounded-xl border border-cyan-400/20 bg-cyan-500/10 p-6"
     >
-      <h2 class="text-xl font-semibold text-white">Modern Practice</h2>
+      <h2 class="flex items-center gap-2 text-xl font-semibold text-white">
+        <Sparkles size={20} class="text-cyan-200" aria-hidden="true" />
+        Modern Practice
+      </h2>
       <p class="mt-3 text-sm leading-7 text-slate-300 sm:text-base">
         Today, Stove Philosophy continues in kitchens everywhere: in every
         careful stir, every rescued sauce, and every brave decision to lower the

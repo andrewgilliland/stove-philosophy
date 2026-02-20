@@ -1,4 +1,5 @@
 ---
+import { ArrowRight, BookOpen, Flame, Soup } from "@lucide/astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -11,7 +12,7 @@ import Layout from "../layouts/Layout.astro";
         Stove Philosophy
       </p>
       <h1
-        class="mt-5 max-w-3xl bg-gradient-to-r from-slate-100 via-cyan-100 to-indigo-200 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-6xl"
+        class="mt-5 max-w-3xl bg-linear-to-r from-slate-100 via-cyan-100 to-indigo-200 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-6xl"
       >
         Endure heat. Stir occasionally. Pretend this is all very profound.
       </h1>
@@ -23,45 +24,58 @@ import Layout from "../layouts/Layout.astro";
 
     <section class="mt-12 grid gap-5 sm:grid-cols-3">
       <article
-        class="rounded-xl border border-indigo-400/20 bg-gradient-to-b from-indigo-500/10 to-slate-900/70 p-5 shadow-[0_0_24px_rgba(99,102,241,0.15)]"
+        class="rounded-xl border border-indigo-400/20 bg-linear-to-b from-indigo-500/10 to-slate-900/70 p-5 shadow-[0_0_24px_rgba(99,102,241,0.15)]"
       >
         <p class="text-xs uppercase tracking-wider text-indigo-200">Page One</p>
-        <h2 class="mt-2 text-lg font-semibold text-white">Core Principles</h2>
+        <h2
+          class="mt-2 flex items-center gap-2 text-lg font-semibold text-white"
+        >
+          <BookOpen size={18} class="text-indigo-200" aria-hidden="true" />
+          Core Principles
+        </h2>
         <p class="mt-3 text-sm leading-6 text-slate-300">
           Six hard truths from the stovetop, including emotional preheating and
           strategic salting.
         </p>
         <a
           href="/principles"
-          class="mt-4 inline-flex text-sm font-semibold text-indigo-200 hover:text-indigo-100"
-          >Read principles →</a
+          class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-indigo-200 hover:text-indigo-100"
+          >Read principles <ArrowRight size={14} aria-hidden="true" /></a
         >
       </article>
       <article
-        class="rounded-xl border border-emerald-400/20 bg-gradient-to-b from-emerald-500/10 to-slate-900/70 p-5 shadow-[0_0_24px_rgba(16,185,129,0.15)]"
+        class="rounded-xl border border-emerald-400/20 bg-linear-to-b from-emerald-500/10 to-slate-900/70 p-5 shadow-[0_0_24px_rgba(16,185,129,0.15)]"
       >
         <p class="text-xs uppercase tracking-wider text-emerald-200">
           Page Two
         </p>
-        <h2 class="mt-2 text-lg font-semibold text-white">The Four Burners</h2>
+        <h2
+          class="mt-2 flex items-center gap-2 text-lg font-semibold text-white"
+        >
+          <Flame size={18} class="text-emerald-200" aria-hidden="true" />
+          The Four Burners
+        </h2>
         <p class="mt-3 text-sm leading-6 text-slate-300">
           A practical guide to deciding which part of life simmers while the
           others threaten mutiny.
         </p>
         <a
           href="/burners"
-          class="mt-4 inline-flex text-sm font-semibold text-emerald-200 hover:text-emerald-100"
-          >Balance burners →</a
+          class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-emerald-200 hover:text-emerald-100"
+          >Balance burners <ArrowRight size={14} aria-hidden="true" /></a
         >
       </article>
       <article
-        class="rounded-xl border border-amber-400/20 bg-gradient-to-b from-amber-500/10 to-slate-900/70 p-5 shadow-[0_0_24px_rgba(245,158,11,0.15)]"
+        class="rounded-xl border border-amber-400/20 bg-linear-to-b from-amber-500/10 to-slate-900/70 p-5 shadow-[0_0_24px_rgba(245,158,11,0.15)]"
       >
         <p class="text-xs uppercase tracking-wider text-slate-400">
           Page Three
         </p>
         <h2 class="mt-2 text-lg font-semibold text-white">
-          Leftovers & Mortality
+          <span class="flex items-center gap-2">
+            <Soup size={18} class="text-amber-200" aria-hidden="true" />
+            Leftovers & Mortality
+          </span>
         </h2>
         <p class="mt-3 text-sm leading-6 text-slate-300">
           A cheerful reminder that all things end, including that suspicious
@@ -69,8 +83,8 @@ import Layout from "../layouts/Layout.astro";
         </p>
         <a
           href="/leftovers"
-          class="mt-4 inline-flex text-sm font-semibold text-amber-200 hover:text-amber-100"
-          >Contemplate leftovers →</a
+          class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-amber-200 hover:text-amber-100"
+          >Contemplate leftovers <ArrowRight size={14} aria-hidden="true" /></a
         >
       </article>
     </section>

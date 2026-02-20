@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { BookOpen, Flame, House, Info, Soup } from "@lucide/astro";
 
 const {
   title = "Stove Philosophy",
@@ -11,15 +12,15 @@ const canonicalUrl = Astro.url;
 const imageUrl = new URL(image, Astro.url);
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/principles", label: "Core Principles" },
-  { href: "/burners", label: "Four Burners" },
-  { href: "/leftovers", label: "Leftovers" },
+  { href: "/", label: "Home", Icon: House },
+  { href: "/about", label: "About", Icon: Info },
+  { href: "/principles", label: "Core Principles", Icon: BookOpen },
+  { href: "/burners", label: "Four Burners", Icon: Flame },
+  { href: "/leftovers", label: "Leftovers", Icon: Soup },
 ];
 
 const navLinkClass = (href: string) =>
-  `rounded-md px-3 py-2 text-sm transition ${
+  `inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm transition ${
     pathname === href
       ? "bg-indigo-500/20 text-indigo-200 ring-1 ring-indigo-400/40"
       : "text-slate-300 hover:bg-cyan-500/10 hover:text-cyan-200"
@@ -67,13 +68,19 @@ const navLinkClass = (href: string) =>
       >
         <a
           href="/"
-          class="brand-shimmer bg-gradient-to-r from-amber-300 via-orange-300 to-rose-300 bg-clip-text text-sm font-semibold tracking-wide text-transparent"
+          class="brand-shimmer bg-linear-to-r from-amber-300 via-orange-300 to-rose-300 bg-clip-text text-sm font-semibold tracking-wide text-transparent"
           >Stove Philosophy</a
         >
         <nav class="flex flex-wrap gap-1">
           {
             navItems.map((item) => (
               <a href={item.href} class={navLinkClass(item.href)}>
+                <item.Icon
+                  size={16}
+                  stroke-width={2}
+                  class="h-4 w-4"
+                  aria-hidden="true"
+                />
                 {item.label}
               </a>
             ))
@@ -81,7 +88,7 @@ const navLinkClass = (href: string) =>
         </nav>
       </div>
       <div
-        class="gradient-sweep h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent"
+        class="gradient-sweep h-px bg-linear-to-r from-transparent via-cyan-400/60 to-transparent"
       >
       </div>
     </header>
